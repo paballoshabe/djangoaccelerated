@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% extends 'mysite/index.html' %}
+{% block body_block %}
+    <h1>Fill the form</h1>
+    <div class="container">
+        <form method="post">
+            {{ form.as_p }}
+            {% csrf_token %}
+            <input type="submit" class="btn btn-primary btn-lg px-4 me-md-2" value="Submit">
+        </form>
+    </div>
+{% endblock %}
+
+
+
+
+

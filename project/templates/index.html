@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lion Pic</title>
+    <link rel="stylesheet" href="{% static "css/style.css"%}"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"/>
+</head>
+<body>
+    <h1>Customer's shopping details</h1>
+    <div class="container py-3">
+        <header>
+            <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+                <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="me-2" viewBox="0 0 118 94" role="img">Bootstrap</svg>
+                    <span class="fs-4">Shop</span>
+                </a>
+ 
+            <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+                <a class="me-4 py-2 text-dark text-decoration-none" href="#">Products</a>
+                <a class="me-4 py-2 text-dark text-decoration-none" href={% url 'form' %}>Shop Now</a>
+                <a class="me-4 py-2 text-dark text-decoration-none" href={% url 'shopping_detail' %}>Shopping Details</a>
+            </nav>
+            </div>
+          <div class="jumbotron">  
+            {% block body_block %}
+ 
+            {% endblock %}
+            <p class="lead">Welcome to our shop , we have a variety of brands you can choose from</p>
+          </div>
+ 
+       
+        </div>
+</body>
+</html>
